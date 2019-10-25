@@ -19,6 +19,9 @@
 		6078BE0C2362870300EC34AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6078BE0A2362870300EC34AF /* LaunchScreen.storyboard */; };
 		6078BE172362870300EC34AF /* Ark_of_War_HelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6078BE162362870300EC34AF /* Ark_of_War_HelperTests.swift */; };
 		6078BE222362870300EC34AF /* Ark_of_War_HelperUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6078BE212362870300EC34AF /* Ark_of_War_HelperUITests.swift */; };
+		6078BE30236289C600EC34AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6078BE2F236289C600EC34AF /* Main.storyboard */; };
+		6078BE3223628A6700EC34AF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6078BE3123628A6700EC34AF /* MainViewController.swift */; };
+		6078BE3523628F4600EC34AF /* Commander.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6078BE3423628F4600EC34AF /* Commander.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +62,9 @@
 		6078BE1D2362870300EC34AF /* Ark of War HelperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Ark of War HelperUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6078BE212362870300EC34AF /* Ark_of_War_HelperUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ark_of_War_HelperUITests.swift; sourceTree = "<group>"; };
 		6078BE232362870300EC34AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6078BE2F236289C600EC34AF /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		6078BE3123628A6700EC34AF /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		6078BE3423628F4600EC34AF /* Commander.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Commander.swift; sourceTree = "<group>"; };
 		65D38B86EE5E3CE08901E8A9 /* Pods-Ark of War Helper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ark of War Helper.release.xcconfig"; path = "Pods/Target Support Files/Pods-Ark of War Helper/Pods-Ark of War Helper.release.xcconfig"; sourceTree = "<group>"; };
 		8E9C8C6FA201C5D89FFA7169 /* Pods_Ark_of_War_HelperUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ark_of_War_HelperUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D4D75D134CBAA68D433F8F9 /* Pods-Ark of War Helper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ark of War Helper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Ark of War Helper/Pods-Ark of War Helper.debug.xcconfig"; sourceTree = "<group>"; };
@@ -128,9 +134,12 @@
 		6078BDFB2362870000EC34AF /* Ark of War Helper */ = {
 			isa = PBXGroup;
 			children = (
+				6078BE3323628F2900EC34AF /* Model */,
 				6078BDFC2362870000EC34AF /* AppDelegate.swift */,
 				6078BDFE2362870000EC34AF /* SceneDelegate.swift */,
 				6078BE032362870000EC34AF /* ContentView.swift */,
+				6078BE3123628A6700EC34AF /* MainViewController.swift */,
+				6078BE2F236289C600EC34AF /* Main.storyboard */,
 				6078BE052362870300EC34AF /* Assets.xcassets */,
 				6078BE0A2362870300EC34AF /* LaunchScreen.storyboard */,
 				6078BE0D2362870300EC34AF /* Info.plist */,
@@ -164,6 +173,14 @@
 				6078BE232362870300EC34AF /* Info.plist */,
 			);
 			path = "Ark of War HelperUITests";
+			sourceTree = "<group>";
+		};
+		6078BE3323628F2900EC34AF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6078BE3423628F4600EC34AF /* Commander.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		D7F1DA2D09259682CB4A8FEB /* Pods */ = {
@@ -289,6 +306,7 @@
 				6078BE0C2362870300EC34AF /* LaunchScreen.storyboard in Resources */,
 				6078BE092362870300EC34AF /* Preview Assets.xcassets in Resources */,
 				6078BE062362870300EC34AF /* Assets.xcassets in Resources */,
+				6078BE30236289C600EC34AF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,6 +404,8 @@
 				6078BE022362870000EC34AF /* Ark_of_War_Helper.xcdatamodeld in Sources */,
 				6078BE042362870000EC34AF /* ContentView.swift in Sources */,
 				6078BDFF2362870000EC34AF /* SceneDelegate.swift in Sources */,
+				6078BE3523628F4600EC34AF /* Commander.swift in Sources */,
+				6078BE3223628A6700EC34AF /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
