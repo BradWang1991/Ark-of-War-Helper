@@ -19,6 +19,8 @@
 		6078BE0C2362870300EC34AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6078BE0A2362870300EC34AF /* LaunchScreen.storyboard */; };
 		6078BE172362870300EC34AF /* Ark_of_War_HelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6078BE162362870300EC34AF /* Ark_of_War_HelperTests.swift */; };
 		6078BE222362870300EC34AF /* Ark_of_War_HelperUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6078BE212362870300EC34AF /* Ark_of_War_HelperUITests.swift */; };
+		DFD2B4782363778300673C61 /* Weapon.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD2B4772363778300673C61 /* Weapon.swift */; };
+		DFD2B47B23637AAA00673C61 /* Skill.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD2B47A23637AAA00673C61 /* Skill.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		8E9C8C6FA201C5D89FFA7169 /* Pods_Ark_of_War_HelperUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ark_of_War_HelperUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D4D75D134CBAA68D433F8F9 /* Pods-Ark of War Helper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ark of War Helper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Ark of War Helper/Pods-Ark of War Helper.debug.xcconfig"; sourceTree = "<group>"; };
 		BA785513CEA8C15AD08C3B82 /* Pods_Ark_of_War_Helper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ark_of_War_Helper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFD2B4772363778300673C61 /* Weapon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weapon.swift; sourceTree = "<group>"; };
+		DFD2B47A23637AAA00673C61 /* Skill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Skill.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +132,8 @@
 		6078BDFB2362870000EC34AF /* Ark of War Helper */ = {
 			isa = PBXGroup;
 			children = (
+				DFD2B47923637A9F00673C61 /* Skill */,
+				DFD2B4762363776000673C61 /* Equipment */,
 				6078BDFC2362870000EC34AF /* AppDelegate.swift */,
 				6078BDFE2362870000EC34AF /* SceneDelegate.swift */,
 				6078BE032362870000EC34AF /* ContentView.swift */,
@@ -177,6 +183,22 @@
 				13C5AC44F1F71DBE138FB5CA /* Pods-Ark of War HelperUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		DFD2B4762363776000673C61 /* Equipment */ = {
+			isa = PBXGroup;
+			children = (
+				DFD2B4772363778300673C61 /* Weapon.swift */,
+			);
+			path = Equipment;
+			sourceTree = "<group>";
+		};
+		DFD2B47923637A9F00673C61 /* Skill */ = {
+			isa = PBXGroup;
+			children = (
+				DFD2B47A23637AAA00673C61 /* Skill.swift */,
+			);
+			path = Skill;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -382,8 +404,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFD2B4782363778300673C61 /* Weapon.swift in Sources */,
 				6078BDFD2362870000EC34AF /* AppDelegate.swift in Sources */,
 				6078BE022362870000EC34AF /* Ark_of_War_Helper.xcdatamodeld in Sources */,
+				DFD2B47B23637AAA00673C61 /* Skill.swift in Sources */,
 				6078BE042362870000EC34AF /* ContentView.swift in Sources */,
 				6078BDFF2362870000EC34AF /* SceneDelegate.swift in Sources */,
 			);
