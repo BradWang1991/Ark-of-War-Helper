@@ -1,0 +1,6 @@
+framework module Pods_Ark_of_War_Helper {
+  umbrella header "Pods-Ark of War Helper-umbrella.h"
+
+  export *
+  module * { export * }
+}

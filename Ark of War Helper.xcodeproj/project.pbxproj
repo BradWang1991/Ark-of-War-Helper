@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A8A7B3B441424DA21C735B9 /* Pods_Ark_of_War_HelperUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E9C8C6FA201C5D89FFA7169 /* Pods_Ark_of_War_HelperUITests.framework */; };
+		163BF94E3A7F26EF52088138 /* Pods_Ark_of_War_HelperTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57F111FFC39329B457AC4220 /* Pods_Ark_of_War_HelperTests.framework */; };
+		1C2CBD6407BADC3824EFB0D8 /* Pods_Ark_of_War_Helper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA785513CEA8C15AD08C3B82 /* Pods_Ark_of_War_Helper.framework */; };
 		6078BDFD2362870000EC34AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6078BDFC2362870000EC34AF /* AppDelegate.swift */; };
 		6078BDFF2362870000EC34AF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6078BDFE2362870000EC34AF /* SceneDelegate.swift */; };
 		6078BE022362870000EC34AF /* Ark_of_War_Helper.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6078BE002362870000EC34AF /* Ark_of_War_Helper.xcdatamodeld */; };
@@ -36,6 +39,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		13C5AC44F1F71DBE138FB5CA /* Pods-Ark of War HelperUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ark of War HelperUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Ark of War HelperUITests/Pods-Ark of War HelperUITests.release.xcconfig"; sourceTree = "<group>"; };
+		1AF836FAAC6ACB218C7917CE /* Pods-Ark of War HelperUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ark of War HelperUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Ark of War HelperUITests/Pods-Ark of War HelperUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		1FF323F814AB8AAA2D9A064C /* Pods-Ark of War HelperTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ark of War HelperTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Ark of War HelperTests/Pods-Ark of War HelperTests.debug.xcconfig"; sourceTree = "<group>"; };
+		57F111FFC39329B457AC4220 /* Pods_Ark_of_War_HelperTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ark_of_War_HelperTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F112EA3611810EF04498942 /* Pods-Ark of War HelperTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ark of War HelperTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Ark of War HelperTests/Pods-Ark of War HelperTests.release.xcconfig"; sourceTree = "<group>"; };
 		6078BDF92362870000EC34AF /* Ark of War Helper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ark of War Helper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6078BDFC2362870000EC34AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6078BDFE2362870000EC34AF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +59,10 @@
 		6078BE1D2362870300EC34AF /* Ark of War HelperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Ark of War HelperUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6078BE212362870300EC34AF /* Ark_of_War_HelperUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ark_of_War_HelperUITests.swift; sourceTree = "<group>"; };
 		6078BE232362870300EC34AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65D38B86EE5E3CE08901E8A9 /* Pods-Ark of War Helper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ark of War Helper.release.xcconfig"; path = "Pods/Target Support Files/Pods-Ark of War Helper/Pods-Ark of War Helper.release.xcconfig"; sourceTree = "<group>"; };
+		8E9C8C6FA201C5D89FFA7169 /* Pods_Ark_of_War_HelperUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ark_of_War_HelperUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D4D75D134CBAA68D433F8F9 /* Pods-Ark of War Helper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ark of War Helper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Ark of War Helper/Pods-Ark of War Helper.debug.xcconfig"; sourceTree = "<group>"; };
+		BA785513CEA8C15AD08C3B82 /* Pods_Ark_of_War_Helper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ark_of_War_Helper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C2CBD6407BADC3824EFB0D8 /* Pods_Ark_of_War_Helper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				163BF94E3A7F26EF52088138 /* Pods_Ark_of_War_HelperTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +86,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A8A7B3B441424DA21C735B9 /* Pods_Ark_of_War_HelperUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F583F91DFC5CF5EAF1E1165 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BA785513CEA8C15AD08C3B82 /* Pods_Ark_of_War_Helper.framework */,
+				57F111FFC39329B457AC4220 /* Pods_Ark_of_War_HelperTests.framework */,
+				8E9C8C6FA201C5D89FFA7169 /* Pods_Ark_of_War_HelperUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		6078BDF02362870000EC34AF = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +110,8 @@
 				6078BE152362870300EC34AF /* Ark of War HelperTests */,
 				6078BE202362870300EC34AF /* Ark of War HelperUITests */,
 				6078BDFA2362870000EC34AF /* Products */,
+				D7F1DA2D09259682CB4A8FEB /* Pods */,
+				4F583F91DFC5CF5EAF1E1165 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -139,6 +166,19 @@
 			path = "Ark of War HelperUITests";
 			sourceTree = "<group>";
 		};
+		D7F1DA2D09259682CB4A8FEB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9D4D75D134CBAA68D433F8F9 /* Pods-Ark of War Helper.debug.xcconfig */,
+				65D38B86EE5E3CE08901E8A9 /* Pods-Ark of War Helper.release.xcconfig */,
+				1FF323F814AB8AAA2D9A064C /* Pods-Ark of War HelperTests.debug.xcconfig */,
+				5F112EA3611810EF04498942 /* Pods-Ark of War HelperTests.release.xcconfig */,
+				1AF836FAAC6ACB218C7917CE /* Pods-Ark of War HelperUITests.debug.xcconfig */,
+				13C5AC44F1F71DBE138FB5CA /* Pods-Ark of War HelperUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -146,6 +186,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6078BE262362870300EC34AF /* Build configuration list for PBXNativeTarget "Ark of War Helper" */;
 			buildPhases = (
+				0F26CB99C3C87962E9F9A884 /* [CP] Check Pods Manifest.lock */,
 				6078BDF52362870000EC34AF /* Sources */,
 				6078BDF62362870000EC34AF /* Frameworks */,
 				6078BDF72362870000EC34AF /* Resources */,
@@ -163,6 +204,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6078BE292362870300EC34AF /* Build configuration list for PBXNativeTarget "Ark of War HelperTests" */;
 			buildPhases = (
+				179132147F209D7C1045F99D /* [CP] Check Pods Manifest.lock */,
 				6078BE0E2362870300EC34AF /* Sources */,
 				6078BE0F2362870300EC34AF /* Frameworks */,
 				6078BE102362870300EC34AF /* Resources */,
@@ -181,6 +223,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6078BE2C2362870300EC34AF /* Build configuration list for PBXNativeTarget "Ark of War HelperUITests" */;
 			buildPhases = (
+				6E2244BFCB2E335C7B070AC3 /* [CP] Check Pods Manifest.lock */,
 				6078BE192362870300EC34AF /* Sources */,
 				6078BE1A2362870300EC34AF /* Frameworks */,
 				6078BE1B2362870300EC34AF /* Resources */,
@@ -264,6 +307,75 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0F26CB99C3C87962E9F9A884 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Ark of War Helper-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		179132147F209D7C1045F99D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Ark of War HelperTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6E2244BFCB2E335C7B070AC3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Ark of War HelperUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6078BDF52362870000EC34AF /* Sources */ = {
@@ -436,6 +548,7 @@
 		};
 		6078BE272362870300EC34AF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D4D75D134CBAA68D433F8F9 /* Pods-Ark of War Helper.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -456,6 +569,7 @@
 		};
 		6078BE282362870300EC34AF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65D38B86EE5E3CE08901E8A9 /* Pods-Ark of War Helper.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -476,6 +590,7 @@
 		};
 		6078BE2A2362870300EC34AF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1FF323F814AB8AAA2D9A064C /* Pods-Ark of War HelperTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -498,6 +613,7 @@
 		};
 		6078BE2B2362870300EC34AF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F112EA3611810EF04498942 /* Pods-Ark of War HelperTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -520,6 +636,7 @@
 		};
 		6078BE2D2362870300EC34AF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1AF836FAAC6ACB218C7917CE /* Pods-Ark of War HelperUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -540,6 +657,7 @@
 		};
 		6078BE2E2362870300EC34AF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 13C5AC44F1F71DBE138FB5CA /* Pods-Ark of War HelperUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
