@@ -17,7 +17,7 @@ protocol Equipment {
     var dodge: Float { get set }
     var critical: Float { get set }
     var antiCtitical: Float { get set }
-    var penetrate: Fload { get set }
+    var penetrate: Float { get set }
     var damageReduction: Float { get set }
     
     var slot:[StarJewlery] { get set }
@@ -32,7 +32,7 @@ protocol StarJewlery {
     var dodge: Float { get set }
     var critical: Float { get set }
     var antiCtitical: Float { get set }
-    var penetrate: Fload { get set }
+    var penetrate: Float { get set }
     var damageReduction: Float { get set }
 }
 

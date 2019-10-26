@@ -11,7 +11,7 @@ import Foundation
 protocol Commander {
     var name: String { get set }
     var leaderShip: Int { get set }
-    var troops: [TroopsGroup] { get set }
+    var troops: [TroopGroup] { get set }
     var alive: Bool { get }
 }
 
@@ -29,13 +29,13 @@ class Gilly: Commander {
     
     var leaderShip: Int
     
-    var troops: [TroopsGroup]
+    var troops: [TroopGroup]
     
     init() {
         name = "Gilly"
         leaderShip = 10000
         troops = [
-            TroopsGroup(troop: Ranger(), number: 1000)
+            TroopGroup(troop: Ranger(), number: 1000)
         ]
     }
 }
@@ -45,18 +45,18 @@ class Rogers: Commander {
     
     var leaderShip: Int
     
-    var troops: [TroopsGroup]
+    var troops: [TroopGroup]
     
     init() {
         name = "Rogers"
         leaderShip = 10000
         troops = [
-            TroopsGroup(troop: Ranger(), number: 1000)
+            TroopGroup(troop: Ranger(), number: 1000)
         ]
     }
 }
 
-class TroopsGroup {
+class TroopGroup {
     var troop: Troop
     var number: Int
     var groupAttack: Int {
