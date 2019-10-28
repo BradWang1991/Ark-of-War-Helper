@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uOr-1X-ZSt">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Bl2-fn-nGd">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -39,6 +40,148 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8ah-zr-Pgy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="103.79464285714285"/>
+        </scene>
+        <!--Commander Select View Controller-->
+        <scene sceneID="AVZ-6B-755">
+            <objects>
+                <viewController storyboardIdentifier="CommanderSelectViewController" id="pu9-uH-ub0" customClass="CommanderSelectViewController" customModule="Ark_of_War_Helper" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="y53-Xi-NJI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Attacker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sjt-jp-8Wz">
+                                <rect key="frame" x="16" y="104" width="65" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Target" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BYt-GC-1hf">
+                                <rect key="frame" x="349" y="104" width="49" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uA2-ic-vmB" customClass="CommanderAvatorButton" customModule="Ark_of_War_Helper" customModuleProvider="target">
+                                <rect key="frame" x="16" y="133" width="60" height="60"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="dam-Im-XZm"/>
+                                    <constraint firstAttribute="height" constant="60" id="h9s-v8-uwg"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jkJ-12-42r" customClass="CommanderAvatorButton" customModule="Ark_of_War_Helper" customModuleProvider="target">
+                                <rect key="frame" x="338" y="133" width="60" height="60"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="nIf-gb-Xzi"/>
+                                    <constraint firstAttribute="width" constant="60" id="tnB-g6-QrK"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Sjt-jp-8Wz" firstAttribute="leading" secondItem="Rzb-2t-Xkm" secondAttribute="leading" constant="16" id="3dH-Kg-J9y"/>
+                            <constraint firstItem="uA2-ic-vmB" firstAttribute="leading" secondItem="Rzb-2t-Xkm" secondAttribute="leading" constant="16" id="5dV-55-ovU"/>
+                            <constraint firstItem="uA2-ic-vmB" firstAttribute="top" secondItem="Sjt-jp-8Wz" secondAttribute="bottom" constant="8" id="ASb-nB-8a5"/>
+                            <constraint firstItem="jkJ-12-42r" firstAttribute="top" secondItem="BYt-GC-1hf" secondAttribute="bottom" constant="8" id="Fb2-Oi-Rfz"/>
+                            <constraint firstItem="Rzb-2t-Xkm" firstAttribute="trailing" secondItem="jkJ-12-42r" secondAttribute="trailing" constant="16" id="GBE-Bf-UHH"/>
+                            <constraint firstItem="BYt-GC-1hf" firstAttribute="top" secondItem="Rzb-2t-Xkm" secondAttribute="top" constant="16" id="NKh-hb-caJ"/>
+                            <constraint firstItem="Sjt-jp-8Wz" firstAttribute="top" secondItem="Rzb-2t-Xkm" secondAttribute="top" constant="16" id="U3J-Rm-lkt"/>
+                            <constraint firstItem="Rzb-2t-Xkm" firstAttribute="trailing" secondItem="BYt-GC-1hf" secondAttribute="trailing" constant="16" id="s4R-h2-hvK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Rzb-2t-Xkm"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="1hT-LD-Mx9"/>
+                    <connections>
+                        <outlet property="attackerCommanderImageButton" destination="uA2-ic-vmB" id="o82-O5-bBH"/>
+                        <outlet property="targetCommanderImageButton" destination="jkJ-12-42r" id="mpK-9Q-fXp"/>
+                        <segue destination="Kgu-zc-2Ma" kind="show" id="JXD-g3-Fl4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RwC-SG-2aO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1805.7971014492755" y="103.79464285714285"/>
+        </scene>
+        <!--Commander List View Controller-->
+        <scene sceneID="gsD-WV-ySV">
+            <objects>
+                <viewController storyboardIdentifier="CommanderListViewController" id="Kgu-zc-2Ma" customClass="CommanderListViewController" customModule="Ark_of_War_Helper" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Tg3-EB-dIq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8Ai-J6-6Ev">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="1Q3-vw-blA">
+                                    <size key="itemSize" width="60" height="60"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CommanderListCollectionViewCell" id="LEA-mc-zHY" customClass="CommanderListCollectionViewCell" customModule="Ark_of_War_Helper" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="QpW-Hl-XfR">
+                                            <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cIL-T0-Xp7" customClass="CommanderAvatorButton" customModule="Ark_of_War_Helper" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="cIL-T0-Xp7" secondAttribute="trailing" id="56G-Sg-x3A"/>
+                                                <constraint firstAttribute="bottom" secondItem="cIL-T0-Xp7" secondAttribute="bottom" id="9gm-zX-cVa"/>
+                                                <constraint firstItem="cIL-T0-Xp7" firstAttribute="top" secondItem="QpW-Hl-XfR" secondAttribute="top" id="Ees-fc-yt8"/>
+                                                <constraint firstItem="cIL-T0-Xp7" firstAttribute="leading" secondItem="QpW-Hl-XfR" secondAttribute="leading" id="MSg-t5-jky"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="60" height="60"/>
+                                        <connections>
+                                            <outlet property="imageButton" destination="cIL-T0-Xp7" id="gFn-rt-knK"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="8Ai-J6-6Ev" firstAttribute="leading" secondItem="phV-4H-CcF" secondAttribute="leading" id="6M6-sh-cnB"/>
+                            <constraint firstItem="8Ai-J6-6Ev" firstAttribute="top" secondItem="phV-4H-CcF" secondAttribute="top" id="7ZR-Fu-lcr"/>
+                            <constraint firstItem="8Ai-J6-6Ev" firstAttribute="trailing" secondItem="phV-4H-CcF" secondAttribute="trailing" id="8uO-au-URQ"/>
+                            <constraint firstItem="8Ai-J6-6Ev" firstAttribute="bottom" secondItem="phV-4H-CcF" secondAttribute="bottom" id="zr4-uh-uFJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="phV-4H-CcF"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="nX0-os-Gcb"/>
+                    <connections>
+                        <outlet property="commanderListCollectionView" destination="8Ai-J6-6Ev" id="3fU-6f-A2s"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HqN-3V-bEo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2515.9420289855075" y="103.79464285714285"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="orE-Au-1Z5">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Bl2-fn-nGd" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rIy-bo-avI">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="pu9-uH-ub0" kind="relationship" relationship="rootViewController" id="sH8-A9-rxX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wPy-HS-E2u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="895.6521739130435" y="103.79464285714285"/>
         </scene>
     </scenes>
 </document>

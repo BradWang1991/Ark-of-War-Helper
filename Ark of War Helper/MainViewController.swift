@@ -28,9 +28,16 @@ class MainViewController: UIViewController {
             let roundLog = "第\(round)回合\n"
             print(roundLog)
             combatLog.text += roundLog
+            
+            attacker.skill.forEach { $0.doSkill(attacker: attacker.troops[0], target: target.troops[0])
+            }
             let attack = attacker.troops[0].groupAttack
+            let attackBuff = attacker.troops[0].attackBuff
+            print("攻击加成:\(attackBuff)")
+            let totalAttack = Int(Double(attack) * (1.0 + attackBuff))
+            print("总攻击为原始的\(Double(totalAttack)/Double(attack))倍")
             let defense = target.troops[0].groupDefense
-            let damage = attack*attack/defense
+            let damage = totalAttack*totalAttack/defense
             let hp = target.troops[0].troop.hp
             let deadNumber = min(damage/hp, target.troops[0].number)
             
@@ -39,6 +46,8 @@ class MainViewController: UIViewController {
             combatLog.text += log
             print(log)
             target.troops[0].number -= deadNumber
+            
+            attacker.troops.forEach{$0.attackBuff = 0}
             
             let temp = attacker
             attacker = target

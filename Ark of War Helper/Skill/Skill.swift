@@ -17,71 +17,83 @@ public enum TroopType: String {
 
 protocol Skill {
     var name: String { get set }
+    var level: Int { get set }
     var type: TroopType { get set }
-    var probability: Float { get set }
+    var probability: Int { get set }
     var description: String { get set }
     
-    var attack: Float { get set }
-    var defense: Float { get set }
-    var hp: Float { get set }
-    var hit: Float { get set }
+    var attack: Double { get }
+    var attackScale: Double { get set }
+    var defense: Double { get set }
+    var hp: Double { get set }
+    var hit: Double { get set }
     var willHit: Bool { get set }
-    var dodge: Float { get set }
-    var critical: Float { get set }
+    var dodge: Double { get set }
+    var critical: Double { get set }
     var willCrit: Bool { get set }
-    var antiCtitical: Float { get set }
-    var penetrate: Float { get set }
-    var damageReduction: Float { get set }
+    var antiCtitical: Double { get set }
+    var penetrate: Double { get set }
+    var damageReduction: Double { get set }
     var duration: Int { get set }
     
-    var attacker: TroopGroup { get }
-    var target: TroopGroup { get }
+    var skillTrigger: Bool { get }
     
-    func doSkill(attacker: TroopGroup, defense: TroopGroup)
+    func doSkill(attacker: TroopGroup, target: TroopGroup)
+}
+
+extension Skill {
+    var skillTrigger: Bool {
+        let thisTime = Int.random(in: 0 ..< 100)
+        let result = thisTime < probability
+        print("本次点数为\(thisTime),\(result ? "发动技能" : "没有发动")")
+        
+        return result
+    }
 }
 
 class Crush: Skill {
-    var attacker: TroopGroup
     
-    var target: TroopGroup
+    var name: String = "碾压"
     
-    var name: String = ""
+    var level: Int = 10
     
     var type: TroopType = .all
     
-    var probability: Float = 0
+    var probability: Int = 40
     
     var description: String = ""
     
-    var defense: Float = 0
+    var defense: Double = 0
     
-    var hp: Float = 0
+    var hp: Double = 0
     
-    var hit: Float = 0
+    var hit: Double = 0
     
-    var dodge: Float = 0
+    var dodge: Double = 0
     
-    var critical: Float = 0
+    var critical: Double = 0
     
     var willCrit: Bool = false
     
-    var antiCtitical: Float = 0
+    var antiCtitical: Double = 0
     
-    var penetrate: Float = 0
+    var penetrate: Double = 0
     
-    var damageReduction: Float = 0
+    var damageReduction: Double = 0
     
-    var attack: Float = 100
+    var attack: Double {
+        return Double(level) * attackScale
+    }
+    var attackScale: Double = 0.04
     var willHit: Bool = true
     var duration: Int = 0
     
-    init(attacker: TroopGroup, target: TroopGroup) {
-        self.attacker = attacker
-        self.target = target
-    }
+    init() {}
     
-    func doSkill(attacker: TroopGroup, defense: TroopGroup) {
-        //attakcer += attack
+    func doSkill(attacker: TroopGroup, target: TroopGroup) {
+        guard skillTrigger else { return }
+        print("\(attacker)发动了\(name),等级\(level)")
+        attacker.attackBuff += attack
     }
 }
 
