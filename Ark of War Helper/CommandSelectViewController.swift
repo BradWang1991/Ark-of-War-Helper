@@ -15,10 +15,16 @@ protocol CommanderSelectViewControllerDelegate: class  {
 
 class CommanderSelectViewController: UIViewController, CommanderSelectViewControllerDelegate {
     
+    @IBOutlet weak var scrollView: UIScrollView!
+    
+    
     @IBOutlet weak var attackerCommanderImageButton: CommanderAvatorButton!
     @IBOutlet weak var targetCommanderImageButton: CommanderAvatorButton!
 
     override func viewDidLoad() {
+        
+        setupViews()
+        
         let buttonAction1: () -> () = { [weak self] in
             guard let commanderListViewController = self?.storyboard?.instantiateViewController(withIdentifier: "CommanderListViewController") as? CommanderListViewController else { return }
             commanderListViewController.delegate = self
@@ -40,6 +46,24 @@ class CommanderSelectViewController: UIViewController, CommanderSelectViewContro
         
     }
     
+    private func setupViews() {
+        scrollView.bounces = false
+        //scrollView.alwaysBounceHorizontal = false
+        //scrollView.alwaysBounceVertical = false
+    }
+    
+    @IBAction func attackButtonClicked(_ sender: Any) {
+        guard let logViewController = storyboard?.instantiateViewController(withIdentifier: "MainViewController") as? MainViewController,
+        
+        let attacker = attackerCommanderImageButton.commander,
+        let target = targetCommanderImageButton.commander
+         else { return }
+        
+        let log = CombatManager.shared.combat(attacker: attacker, target: target)
+        logViewController.combatLog = log
+        
+        navigationController?.pushViewController(logViewController, animated: true)
+    }
     
     
     

@@ -16,6 +16,8 @@
 		60034DF523662F1000066B86 /* CommanderListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60034DF423662F1000066B86 /* CommanderListViewController.swift */; };
 		60034DF7236636FE00066B86 /* CommanderAvator.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60034DF6236636FE00066B86 /* CommanderAvator.xcassets */; };
 		60034DF92366588400066B86 /* CommanderListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60034DF82366588400066B86 /* CommanderListCollectionViewCell.swift */; };
+		60045B9F236BA75C00DB1A27 /* CombatManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60045B9E236BA75C00DB1A27 /* CombatManager.swift */; };
+		60045BA3236BAC2200DB1A27 /* Troop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60045BA2236BAC2200DB1A27 /* Troop.swift */; };
 		6078BDFD2362870000EC34AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6078BDFC2362870000EC34AF /* AppDelegate.swift */; };
 		6078BDFF2362870000EC34AF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6078BDFE2362870000EC34AF /* SceneDelegate.swift */; };
 		6078BE022362870000EC34AF /* Ark_of_War_Helper.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6078BE002362870000EC34AF /* Ark_of_War_Helper.xcdatamodeld */; };
@@ -61,6 +63,8 @@
 		60034DF423662F1000066B86 /* CommanderListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommanderListViewController.swift; sourceTree = "<group>"; };
 		60034DF6236636FE00066B86 /* CommanderAvator.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = CommanderAvator.xcassets; sourceTree = "<group>"; };
 		60034DF82366588400066B86 /* CommanderListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommanderListCollectionViewCell.swift; sourceTree = "<group>"; };
+		60045B9E236BA75C00DB1A27 /* CombatManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombatManager.swift; sourceTree = "<group>"; };
+		60045BA2236BAC2200DB1A27 /* Troop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Troop.swift; sourceTree = "<group>"; };
 		6078BDF92362870000EC34AF /* Ark of War Helper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ark of War Helper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6078BDFC2362870000EC34AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6078BDFE2362870000EC34AF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -142,6 +146,22 @@
 			path = CommanderAvatorButton;
 			sourceTree = "<group>";
 		};
+		60045BA0236BABEA00DB1A27 /* Commander */ = {
+			isa = PBXGroup;
+			children = (
+				6078BE3423628F4600EC34AF /* Commander.swift */,
+			);
+			path = Commander;
+			sourceTree = "<group>";
+		};
+		60045BA1236BAC1400DB1A27 /* Troop */ = {
+			isa = PBXGroup;
+			children = (
+				60045BA2236BAC2200DB1A27 /* Troop.swift */,
+			);
+			path = Troop;
+			sourceTree = "<group>";
+		};
 		6078BDF02362870000EC34AF = {
 			isa = PBXGroup;
 			children = (
@@ -169,7 +189,6 @@
 			children = (
 				60034DEE23662CC300066B86 /* UIComponent */,
 				6078BE3323628F2900EC34AF /* Model */,
-				DFD2B47923637A9F00673C61 /* Skill */,
 				DFD2B4762363776000673C61 /* Equipment */,
 				6078BDFC2362870000EC34AF /* AppDelegate.swift */,
 				6078BDFE2362870000EC34AF /* SceneDelegate.swift */,
@@ -185,6 +204,7 @@
 				60034DEC23662C4100066B86 /* CommandSelectViewController.swift */,
 				60034DF423662F1000066B86 /* CommanderListViewController.swift */,
 				60034DF82366588400066B86 /* CommanderListCollectionViewCell.swift */,
+				60045B9E236BA75C00DB1A27 /* CombatManager.swift */,
 			);
 			path = "Ark of War Helper";
 			sourceTree = "<group>";
@@ -218,7 +238,9 @@
 		6078BE3323628F2900EC34AF /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				6078BE3423628F4600EC34AF /* Commander.swift */,
+				60045BA1236BAC1400DB1A27 /* Troop */,
+				60045BA0236BABEA00DB1A27 /* Commander */,
+				DFD2B47923637A9F00673C61 /* Skill */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -464,7 +486,9 @@
 				DFD2B4782363778300673C61 /* Weapon.swift in Sources */,
 				6078BDFD2362870000EC34AF /* AppDelegate.swift in Sources */,
 				6078BE022362870000EC34AF /* Ark_of_War_Helper.xcdatamodeld in Sources */,
+				60045B9F236BA75C00DB1A27 /* CombatManager.swift in Sources */,
 				DFD2B47B23637AAA00673C61 /* Skill.swift in Sources */,
+				60045BA3236BAC2200DB1A27 /* Troop.swift in Sources */,
 				6078BE042362870000EC34AF /* ContentView.swift in Sources */,
 				6078BDFF2362870000EC34AF /* SceneDelegate.swift in Sources */,
 				60034DF523662F1000066B86 /* CommanderListViewController.swift in Sources */,

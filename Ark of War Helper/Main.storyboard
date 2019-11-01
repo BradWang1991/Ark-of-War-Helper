@@ -34,7 +34,7 @@
                         <viewLayoutGuide key="safeArea" id="XJu-Ub-Jpk"/>
                     </view>
                     <connections>
-                        <outlet property="combatLog" destination="vcN-o2-DTi" id="7zd-2r-44m"/>
+                        <outlet property="combatLogTextView" destination="vcN-o2-DTi" id="5hP-2x-lW3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8ah-zr-Pgy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -49,53 +49,262 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Attacker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sjt-jp-8Wz">
-                                <rect key="frame" x="16" y="104" width="65" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Target" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BYt-GC-1hf">
-                                <rect key="frame" x="349" y="104" width="49" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uA2-ic-vmB" customClass="CommanderAvatorButton" customModule="Ark_of_War_Helper" customModuleProvider="target">
-                                <rect key="frame" x="16" y="133" width="60" height="60"/>
-                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LR0-gh-5Pa">
+                                <rect key="frame" x="0.0" y="814" width="414" height="48"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="dam-Im-XZm"/>
-                                    <constraint firstAttribute="height" constant="60" id="h9s-v8-uwg"/>
+                                    <constraint firstAttribute="height" constant="48" id="Lhb-1j-8XM"/>
                                 </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jkJ-12-42r" customClass="CommanderAvatorButton" customModule="Ark_of_War_Helper" customModuleProvider="target">
-                                <rect key="frame" x="338" y="133" width="60" height="60"/>
-                                <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="ATTACK!">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="attackButtonClicked:" destination="pu9-uH-ub0" eventType="touchUpInside" id="Wfp-0g-rz6"/>
+                                </connections>
+                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gEj-Fr-gOY">
+                                <rect key="frame" x="0.0" y="88" width="414" height="726"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jvV-8z-YhV" userLabel="ContentView">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="2000"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kcc-Iq-eZf" userLabel="attackerView">
+                                                <rect key="frame" x="0.0" y="0.0" width="207" height="2000"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Attacker" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sjt-jp-8Wz">
+                                                        <rect key="frame" x="0.0" y="16" width="207" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="30" id="3iQ-dc-Kj3"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uA2-ic-vmB" customClass="CommanderAvatorButton" customModule="Ark_of_War_Helper" customModuleProvider="target">
+                                                        <rect key="frame" x="73.5" y="54" width="60" height="60"/>
+                                                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="60" id="dam-Im-XZm"/>
+                                                            <constraint firstAttribute="height" constant="60" id="h9s-v8-uwg"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="F1R-zm-Ocw">
+                                                        <rect key="frame" x="0.0" y="122" width="207" height="80"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Ed-72-mHH" customClass="CommanderAvatorButton" customModule="Ark_of_War_Helper" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="69" height="80"/>
+                                                                <subviews>
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cKC-Ag-Ukz">
+                                                                        <rect key="frame" x="10.5" y="16" width="48" height="48"/>
+                                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="48" id="CHW-03-Wts"/>
+                                                                            <constraint firstAttribute="height" constant="48" id="aiD-JS-mr1"/>
+                                                                        </constraints>
+                                                                    </view>
+                                                                </subviews>
+                                                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstItem="cKC-Ag-Ukz" firstAttribute="centerX" secondItem="1Ed-72-mHH" secondAttribute="centerX" id="KKV-as-uDv"/>
+                                                                    <constraint firstItem="cKC-Ag-Ukz" firstAttribute="centerY" secondItem="1Ed-72-mHH" secondAttribute="centerY" id="wca-Dr-hqI"/>
+                                                                </constraints>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="39v-uM-QJ5" customClass="CommanderAvatorButton" customModule="Ark_of_War_Helper" customModuleProvider="target">
+                                                                <rect key="frame" x="69" y="0.0" width="69" height="80"/>
+                                                                <subviews>
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ggx-Ga-ALX">
+                                                                        <rect key="frame" x="10.5" y="16" width="48" height="48"/>
+                                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="48" id="IOc-BJ-BBN"/>
+                                                                            <constraint firstAttribute="width" constant="48" id="jM0-WJ-eRA"/>
+                                                                        </constraints>
+                                                                    </view>
+                                                                </subviews>
+                                                                <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstItem="Ggx-Ga-ALX" firstAttribute="centerY" secondItem="39v-uM-QJ5" secondAttribute="centerY" id="VN3-Un-ehE"/>
+                                                                    <constraint firstItem="Ggx-Ga-ALX" firstAttribute="centerX" secondItem="39v-uM-QJ5" secondAttribute="centerX" id="eqk-CI-7Hr"/>
+                                                                </constraints>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vxo-0n-6bB" customClass="CommanderAvatorButton" customModule="Ark_of_War_Helper" customModuleProvider="target">
+                                                                <rect key="frame" x="138" y="0.0" width="69" height="80"/>
+                                                                <subviews>
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6vG-m7-G2c">
+                                                                        <rect key="frame" x="10.5" y="16" width="48" height="48"/>
+                                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="48" id="F7M-ZO-FMY"/>
+                                                                            <constraint firstAttribute="height" constant="48" id="MmZ-G1-V6y"/>
+                                                                        </constraints>
+                                                                    </view>
+                                                                </subviews>
+                                                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstItem="6vG-m7-G2c" firstAttribute="centerX" secondItem="Vxo-0n-6bB" secondAttribute="centerX" id="19B-X8-tKh"/>
+                                                                    <constraint firstItem="6vG-m7-G2c" firstAttribute="centerY" secondItem="Vxo-0n-6bB" secondAttribute="centerY" id="fS2-J1-1gR"/>
+                                                                </constraints>
+                                                            </view>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="80" id="q5o-CR-62y"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2dj-EA-401">
+                                                        <rect key="frame" x="0.0" y="210" width="207" height="300"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="300" id="4Wd-4l-Him"/>
+                                                        </constraints>
+                                                        <prototypes>
+                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="iIZ-7S-JsN">
+                                                                <rect key="frame" x="0.0" y="28" width="207" height="60"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iIZ-7S-JsN" id="wxo-Zc-849">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="207" height="60"/>
+                                                                    <autoresizingMask key="autoresizingMask"/>
+                                                                    <subviews>
+                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MTr-tY-J8d" customClass="CommanderAvatorButton" customModule="Ark_of_War_Helper" customModuleProvider="target">
+                                                                            <rect key="frame" x="8" y="6" width="48" height="48"/>
+                                                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" constant="48" id="fgn-6T-qyO"/>
+                                                                                <constraint firstAttribute="height" constant="48" id="vNA-d4-2pl"/>
+                                                                            </constraints>
+                                                                        </view>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="天启" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XwW-sw-1HX">
+                                                                            <rect key="frame" x="64" y="6" width="35" height="21"/>
+                                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="atk + 90" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wcz-DR-Xz0">
+                                                                            <rect key="frame" x="64" y="28" width="64" height="21"/>
+                                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                    <constraints>
+                                                                        <constraint firstItem="MTr-tY-J8d" firstAttribute="leading" secondItem="wxo-Zc-849" secondAttribute="leading" constant="8" id="eGI-xV-3Xa"/>
+                                                                        <constraint firstItem="MTr-tY-J8d" firstAttribute="centerY" secondItem="wxo-Zc-849" secondAttribute="centerY" id="hvy-vR-Wm1"/>
+                                                                    </constraints>
+                                                                </tableViewCellContentView>
+                                                            </tableViewCell>
+                                                        </prototypes>
+                                                    </tableView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="total atk + 90" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zjm-H6-WFX">
+                                                        <rect key="frame" x="8" y="518" width="191" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="78I-DF-xN0" customClass="CommanderAvatorButton" customModule="Ark_of_War_Helper" customModuleProvider="target">
+                                                        <rect key="frame" x="8" y="546.5" width="60" height="60"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="60" id="6WF-k7-ueB"/>
+                                                            <constraint firstAttribute="height" constant="60" id="sJX-Jd-Wg0"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="Zjm-H6-WFX" firstAttribute="top" secondItem="2dj-EA-401" secondAttribute="bottom" constant="8" id="3A5-oF-flp"/>
+                                                    <constraint firstAttribute="trailing" secondItem="2dj-EA-401" secondAttribute="trailing" id="8Yn-8S-JwX"/>
+                                                    <constraint firstItem="Zjm-H6-WFX" firstAttribute="leading" secondItem="Kcc-Iq-eZf" secondAttribute="leading" constant="8" id="DZ9-1R-zaq"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Zjm-H6-WFX" secondAttribute="trailing" constant="8" id="HxZ-hZ-CT4"/>
+                                                    <constraint firstItem="F1R-zm-Ocw" firstAttribute="leading" secondItem="Kcc-Iq-eZf" secondAttribute="leading" id="KCF-9G-yEN"/>
+                                                    <constraint firstItem="2dj-EA-401" firstAttribute="leading" secondItem="Kcc-Iq-eZf" secondAttribute="leading" id="Kgy-vQ-E4n"/>
+                                                    <constraint firstItem="Sjt-jp-8Wz" firstAttribute="leading" secondItem="Kcc-Iq-eZf" secondAttribute="leading" id="PBB-tF-ah8"/>
+                                                    <constraint firstAttribute="trailing" secondItem="F1R-zm-Ocw" secondAttribute="trailing" id="ZZv-aQ-XrN"/>
+                                                    <constraint firstItem="F1R-zm-Ocw" firstAttribute="top" secondItem="uA2-ic-vmB" secondAttribute="bottom" constant="8" id="cbh-7c-EMg"/>
+                                                    <constraint firstItem="Sjt-jp-8Wz" firstAttribute="top" secondItem="Kcc-Iq-eZf" secondAttribute="top" constant="16" id="dvs-AS-OOd"/>
+                                                    <constraint firstAttribute="height" constant="2000" id="knv-XU-XSh"/>
+                                                    <constraint firstItem="uA2-ic-vmB" firstAttribute="top" secondItem="Sjt-jp-8Wz" secondAttribute="bottom" constant="8" id="ktf-Py-jNA"/>
+                                                    <constraint firstItem="78I-DF-xN0" firstAttribute="leading" secondItem="Kcc-Iq-eZf" secondAttribute="leading" constant="8" id="rSp-Cq-mOK"/>
+                                                    <constraint firstItem="78I-DF-xN0" firstAttribute="top" secondItem="Zjm-H6-WFX" secondAttribute="bottom" constant="8" id="sgp-Zb-Rhi"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Sjt-jp-8Wz" secondAttribute="trailing" id="weU-dK-Fkx"/>
+                                                    <constraint firstItem="uA2-ic-vmB" firstAttribute="centerX" secondItem="Kcc-Iq-eZf" secondAttribute="centerX" id="x1R-d2-EMg"/>
+                                                    <constraint firstItem="2dj-EA-401" firstAttribute="top" secondItem="F1R-zm-Ocw" secondAttribute="bottom" constant="8" id="xya-LA-Fwj"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Og-sj-Wdw" userLabel="TargetView">
+                                                <rect key="frame" x="207" y="0.0" width="207" height="2000"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Target" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BYt-GC-1hf">
+                                                        <rect key="frame" x="0.0" y="16" width="207" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="30" id="eHL-s8-6Il"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jkJ-12-42r" customClass="CommanderAvatorButton" customModule="Ark_of_War_Helper" customModuleProvider="target">
+                                                        <rect key="frame" x="73.5" y="54" width="60" height="60"/>
+                                                        <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="60" id="nIf-gb-Xzi"/>
+                                                            <constraint firstAttribute="width" constant="60" id="tnB-g6-QrK"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="jkJ-12-42r" firstAttribute="centerX" secondItem="6Og-sj-Wdw" secondAttribute="centerX" id="IPU-8A-KFx"/>
+                                                    <constraint firstItem="BYt-GC-1hf" firstAttribute="top" secondItem="6Og-sj-Wdw" secondAttribute="top" constant="16" id="MQZ-AF-rC4"/>
+                                                    <constraint firstAttribute="trailing" secondItem="BYt-GC-1hf" secondAttribute="trailing" id="nIk-Ga-93q"/>
+                                                    <constraint firstItem="jkJ-12-42r" firstAttribute="top" secondItem="BYt-GC-1hf" secondAttribute="bottom" constant="8" id="pyp-Wz-L8X"/>
+                                                    <constraint firstItem="BYt-GC-1hf" firstAttribute="leading" secondItem="6Og-sj-Wdw" secondAttribute="leading" id="uz2-jx-UEu"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="6Og-sj-Wdw" firstAttribute="height" secondItem="Kcc-Iq-eZf" secondAttribute="height" id="Ayf-GZ-2wD"/>
+                                            <constraint firstAttribute="trailing" secondItem="6Og-sj-Wdw" secondAttribute="trailing" id="IyS-UX-ua6"/>
+                                            <constraint firstItem="6Og-sj-Wdw" firstAttribute="top" secondItem="jvV-8z-YhV" secondAttribute="top" id="KmM-Mc-Bx2"/>
+                                            <constraint firstItem="Kcc-Iq-eZf" firstAttribute="leading" secondItem="jvV-8z-YhV" secondAttribute="leading" id="QOu-K0-Oks"/>
+                                            <constraint firstItem="6Og-sj-Wdw" firstAttribute="leading" secondItem="Kcc-Iq-eZf" secondAttribute="trailing" id="TX0-b3-3x9"/>
+                                            <constraint firstItem="6Og-sj-Wdw" firstAttribute="width" secondItem="Kcc-Iq-eZf" secondAttribute="width" id="cO1-vV-CP0"/>
+                                            <constraint firstAttribute="bottom" secondItem="Kcc-Iq-eZf" secondAttribute="bottom" id="fU5-iS-dCG"/>
+                                            <constraint firstItem="Kcc-Iq-eZf" firstAttribute="top" secondItem="jvV-8z-YhV" secondAttribute="top" id="jN8-1R-2SB"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="nIf-gb-Xzi"/>
-                                    <constraint firstAttribute="width" constant="60" id="tnB-g6-QrK"/>
+                                    <constraint firstAttribute="bottom" secondItem="jvV-8z-YhV" secondAttribute="bottom" id="1FH-t9-a0t"/>
+                                    <constraint firstItem="jvV-8z-YhV" firstAttribute="leading" secondItem="gEj-Fr-gOY" secondAttribute="leading" id="MXq-pe-vGY"/>
+                                    <constraint firstItem="jvV-8z-YhV" firstAttribute="top" secondItem="gEj-Fr-gOY" secondAttribute="top" id="OBP-1G-jY4"/>
+                                    <constraint firstAttribute="trailing" secondItem="jvV-8z-YhV" secondAttribute="trailing" id="gbd-M1-bba"/>
+                                    <constraint firstItem="jvV-8z-YhV" firstAttribute="width" secondItem="gEj-Fr-gOY" secondAttribute="width" id="vvF-xc-PxX"/>
                                 </constraints>
-                            </view>
+                                <viewLayoutGuide key="contentLayoutGuide" id="pe8-cG-Zea"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="znx-iY-Tdl"/>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="Sjt-jp-8Wz" firstAttribute="leading" secondItem="Rzb-2t-Xkm" secondAttribute="leading" constant="16" id="3dH-Kg-J9y"/>
-                            <constraint firstItem="uA2-ic-vmB" firstAttribute="leading" secondItem="Rzb-2t-Xkm" secondAttribute="leading" constant="16" id="5dV-55-ovU"/>
-                            <constraint firstItem="uA2-ic-vmB" firstAttribute="top" secondItem="Sjt-jp-8Wz" secondAttribute="bottom" constant="8" id="ASb-nB-8a5"/>
-                            <constraint firstItem="jkJ-12-42r" firstAttribute="top" secondItem="BYt-GC-1hf" secondAttribute="bottom" constant="8" id="Fb2-Oi-Rfz"/>
-                            <constraint firstItem="Rzb-2t-Xkm" firstAttribute="trailing" secondItem="jkJ-12-42r" secondAttribute="trailing" constant="16" id="GBE-Bf-UHH"/>
-                            <constraint firstItem="BYt-GC-1hf" firstAttribute="top" secondItem="Rzb-2t-Xkm" secondAttribute="top" constant="16" id="NKh-hb-caJ"/>
-                            <constraint firstItem="Sjt-jp-8Wz" firstAttribute="top" secondItem="Rzb-2t-Xkm" secondAttribute="top" constant="16" id="U3J-Rm-lkt"/>
-                            <constraint firstItem="Rzb-2t-Xkm" firstAttribute="trailing" secondItem="BYt-GC-1hf" secondAttribute="trailing" constant="16" id="s4R-h2-hvK"/>
+                            <constraint firstItem="Rzb-2t-Xkm" firstAttribute="bottom" secondItem="LR0-gh-5Pa" secondAttribute="bottom" id="E9H-lI-f4P"/>
+                            <constraint firstItem="gEj-Fr-gOY" firstAttribute="top" secondItem="Rzb-2t-Xkm" secondAttribute="top" id="TEE-ea-tQM"/>
+                            <constraint firstItem="gEj-Fr-gOY" firstAttribute="leading" secondItem="Rzb-2t-Xkm" secondAttribute="leading" id="g0V-dj-5bQ"/>
+                            <constraint firstItem="Rzb-2t-Xkm" firstAttribute="trailing" secondItem="LR0-gh-5Pa" secondAttribute="trailing" id="gpc-Ia-zAW"/>
+                            <constraint firstItem="LR0-gh-5Pa" firstAttribute="leading" secondItem="Rzb-2t-Xkm" secondAttribute="leading" id="mpo-XD-dfo"/>
+                            <constraint firstItem="gEj-Fr-gOY" firstAttribute="trailing" secondItem="Rzb-2t-Xkm" secondAttribute="trailing" id="oUd-qe-5I7"/>
+                            <constraint firstItem="LR0-gh-5Pa" firstAttribute="top" secondItem="gEj-Fr-gOY" secondAttribute="bottom" id="pOJ-aW-hAC"/>
+                            <constraint firstItem="gEj-Fr-gOY" firstAttribute="centerX" secondItem="Rzb-2t-Xkm" secondAttribute="centerX" id="t0G-g8-VpJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Rzb-2t-Xkm"/>
                     </view>
                     <navigationItem key="navigationItem" id="1hT-LD-Mx9"/>
                     <connections>
                         <outlet property="attackerCommanderImageButton" destination="uA2-ic-vmB" id="o82-O5-bBH"/>
+                        <outlet property="scrollView" destination="gEj-Fr-gOY" id="gHz-t9-eT7"/>
                         <outlet property="targetCommanderImageButton" destination="jkJ-12-42r" id="mpK-9Q-fXp"/>
-                        <segue destination="Kgu-zc-2Ma" kind="show" id="JXD-g3-Fl4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RwC-SG-2aO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -111,7 +320,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8Ai-J6-6Ev">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="1Q3-vw-blA">
                                     <size key="itemSize" width="60" height="60"/>
