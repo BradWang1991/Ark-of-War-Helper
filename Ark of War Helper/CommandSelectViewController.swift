@@ -17,7 +17,6 @@ class CommanderSelectViewController: UIViewController, CommanderSelectViewContro
     
     @IBOutlet weak var scrollView: UIScrollView!
     
-    
     @IBOutlet weak var attackerCommanderImageButton: CommanderAvatorButton!
     @IBOutlet weak var targetCommanderImageButton: CommanderAvatorButton!
 

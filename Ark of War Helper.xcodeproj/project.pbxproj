@@ -195,16 +195,16 @@
 				6078BE032362870000EC34AF /* ContentView.swift */,
 				6078BE3123628A6700EC34AF /* MainViewController.swift */,
 				6078BE2F236289C600EC34AF /* Main.storyboard */,
+				60034DEC23662C4100066B86 /* CommandSelectViewController.swift */,
+				60034DF423662F1000066B86 /* CommanderListViewController.swift */,
+				60034DF82366588400066B86 /* CommanderListCollectionViewCell.swift */,
+				60045B9E236BA75C00DB1A27 /* CombatManager.swift */,
 				6078BE052362870300EC34AF /* Assets.xcassets */,
 				60034DF6236636FE00066B86 /* CommanderAvator.xcassets */,
 				6078BE0A2362870300EC34AF /* LaunchScreen.storyboard */,
 				6078BE0D2362870300EC34AF /* Info.plist */,
 				6078BE002362870000EC34AF /* Ark_of_War_Helper.xcdatamodeld */,
 				6078BE072362870300EC34AF /* Preview Content */,
-				60034DEC23662C4100066B86 /* CommandSelectViewController.swift */,
-				60034DF423662F1000066B86 /* CommanderListViewController.swift */,
-				60034DF82366588400066B86 /* CommanderListCollectionViewCell.swift */,
-				60045B9E236BA75C00DB1A27 /* CombatManager.swift */,
 			);
 			path = "Ark of War Helper";
 			sourceTree = "<group>";
